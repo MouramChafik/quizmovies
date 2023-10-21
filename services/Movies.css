@@ -1,0 +1,65 @@
+#root{
+    margin: 0;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.container-movie{
+    flex-wrap: wrap;
+    margin: 1vh;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px gainsboro;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.movie-img{
+    height: 40vh;
+    border-radius: 10px;
+    margin: 1vh;
+
+}
+.title-movie{
+    font-size: .8rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+.date-movie{
+    margin: 0;
+    font-size: .4rem;
+    margin-bottom: 20px;
+
+}
+
+
+.rating-movie{
+    margin: 0;
+    margin-bottom: 15px;
+    background-color: #f3bb00;
+    width: 2rem;
+    height: 1rem;
+    border-radius: 10px;
+    position: absolute; /* Définit la position absolue pour l'élément h1 */
+    top: 25px; /* Place l'élément en haut du conteneur */
+    right: 0; /* Place l'élément à droite du conteneur */
+    margin: 0; /* Supprime les marges par défaut du h1 */
+    transform: translate(-100%, 0); 
+}

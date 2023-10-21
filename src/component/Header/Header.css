@@ -1,0 +1,25 @@
+/* header.css */
+.Icon {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-right: 1.5rem;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #04bbff;
+  }
+.div-container{
+    display: flex;
+    margin: 5px;
+    background-color: whitesmoke;
+    border-radius: 3vh;
+    box-shadow: 5px 5px 10px 1px gainsboro;
+
+
+.logo{
+    margin-right: 1.5rem;
+    /*width: 80px;
+    object-fit: cover;*/
+}
+  
