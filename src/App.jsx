@@ -4,6 +4,7 @@ import "./App.css";
 import Movies from "../services/Movies";
 import  "/services/Movies.css"
 import Header from "./component/Header/Header"
+import Action from "./component/FilmsCategorie/Action/Action";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <div className="Movies"> 
         <Movies/>
       </div>
+      <div><h1>Action</h1></div>
+      <div><Action/></div>
     </>
   );
 }

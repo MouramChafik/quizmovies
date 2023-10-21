@@ -11,15 +11,14 @@
   }
 .div-container{
     display: flex;
-    margin: 5px;
+    margin: 0px;
     background-color: whitesmoke;
-    border-radius: 3vh;
     box-shadow: 5px 5px 10px 1px gainsboro;
+    width: 100%;
 
 
 .logo{
     margin-right: 1.5rem;
-    /*width: 80px;
-    object-fit: cover;*/
+    object-fit: cover;
 }
   
