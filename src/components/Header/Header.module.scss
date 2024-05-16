@@ -1,0 +1,52 @@
+@import "../../Utilities.scss";
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.logoText {
+  font-size: 3rem;
+  font-family: "Sniglet";
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  line-height: 10vh;
+  margin: 0;
+}
+.userAndScore {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+}
+
+#logo {
+  scale: 0.5;
+}
+.userInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theUser {
+  font-size: 2rem;
+  font-family: "Sniglet";
+  color: #7474d6;
+  width: 30%;
+  text-align: center;
+}
+.theScore {
+  font-size: 2rem;
+  font-family: "Sniglet";
+  color: #7474d6;
+  width: 30%;
+  text-align: center;
+}
+
+.avatar {
+  height: 100%;
+}

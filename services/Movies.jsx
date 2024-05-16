@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const apiKey = "8a6783e6b16c1b77912e3674300721a8";
 
