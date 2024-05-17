@@ -7,6 +7,7 @@ import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Header from "./components/Header/Header";
 import QuizChoose from "./assets/logoSmile2.png";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
@@ -49,12 +50,12 @@ function App() {
   }
 
   return (
-    <div className={styles.appAllContainer}>
+    <><div className={styles.appAllContainer}>
       <select
         id={styles.difficulty}
         onChange={(e) => setTimeDifficulty(e.target.value)}
       >
-        <option value="">--Difficulty ?--</option>
+        <option value="">Difficulty ?</option>
         <option value="30">easy (30s)</option>
         <option value="20">medium (20s)</option>
         <option value="10">hard (10s)</option>
@@ -67,16 +68,14 @@ function App() {
           setNext={setNext}
           reset={reset}
           setPlease={setPlease}
-          setColor={setColor}
-        />
+          setColor={setColor} />
       ) : null}
       <div className={styles.appAll}>
         <div className={styles.appHeader}>
           <Header
             userId={userId}
             score={score}
-            selectedAvatar={selectedAvatar}
-          />
+            selectedAvatar={selectedAvatar} />
         </div>
         <div className={styles.appBody}>
           {userId !== null && selectedAvatar !== null && quizType === "" ? (
@@ -88,8 +87,7 @@ function App() {
             <>
               {film !== null ? (
                 <Outlet
-                  context={[film, reset, userId, setNext, next, timeDifficulty]}
-                />
+                  context={[film, reset, userId, setNext, next, timeDifficulty]} />
               ) : (
                 <p>loading</p>
               )}
@@ -108,8 +106,7 @@ function App() {
                   setPlease={setPlease}
                   setNext={setNext}
                   next={next}
-                  setColor={setColor}
-                />
+                  setColor={setColor} />
               ) : null}
               <Answers
                 setAnswersReturn={setAnswersReturn}
@@ -117,8 +114,7 @@ function App() {
                 setAnswers={setAnswers}
                 setCheck={setCheck}
                 next={next}
-                reset={reset}
-              />
+                reset={reset} />
               {next === true ? (
                 <p
                   className={styles.response}
@@ -135,8 +131,7 @@ function App() {
               {userId === null || selectedAvatar === null ? (
                 <UserId
                   setStateUserId={handleUserIdEntered}
-                  setAvatarSelected={setSelectedAvatar}
-                />
+                  setAvatarSelected={setSelectedAvatar} />
               ) : null}
             </>
           )}
@@ -147,7 +142,7 @@ function App() {
           className={styles.dropDownMenu}
           onChange={(e) => handleChangeMode(e)}
         >
-          <option value="">--Theme ?--</option>
+          <option value="">Theme ?</option>
           <option value="/images">Image</option>
           <option value="/synopsis">Synopsis</option>
         </select>
@@ -174,7 +169,9 @@ function App() {
           </div>
         ) : null}
       </div>
-    </div>
+    </div><footer>
+        <Footer />
+      </footer></>
   );
 }
 

@@ -1,10 +1,18 @@
 .synopsisText {
-  color: #202c55;
+  color: #ffffff;
+  padding: 25px;
+  letter-spacing: 1px;
   font-size: 1.3rem;
   font-family: "Sniglet";
   height: 30vh;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: #ffffff #7474d600;
   scrollbar-width: thin;
   display: flex;
+}
+
+.synopsis{
+ border-radius: 5px;
+ background-color: #7474d6b0;
+
 }

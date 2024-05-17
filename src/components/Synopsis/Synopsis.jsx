@@ -11,7 +11,7 @@ export default function Synopsis({
   timeDifficulty,
 }) {
   return (
-    <div>
+    <div className={styles.synopsis}>
       <p className={styles.synopsisText}>{`${film.overview}`}</p>
       <div>
         {reset.current === true && userId !== null && next === false ? (
