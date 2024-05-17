@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Header.module.css";
+import logo from "../../assets/api.png";
 
 function Header({ userId, score, selectedAvatar }) {
   return (
     <div className={styles.header}>
-      <h2 className={styles.logoText}>🎬 API-Quiz</h2>
+      <img src={logo} alt="logo of application" className={styles.logoApp}/>
       <div className={styles.userAndScore}>
         <p className={styles.theUser}>{userId}</p>
         {selectedAvatar !== null && (
