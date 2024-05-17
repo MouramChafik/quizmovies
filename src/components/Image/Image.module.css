@@ -1,8 +1,5 @@
 .imgContainer {
-  width:
-    clamp 100px,
-    100%,
-    500px;
+  width: clamp 100px, 100%, 500px;
 }
 
 .appImg {
@@ -10,4 +7,4 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 10px 5px 5px rgb(198, 198, 198);
-} /*# sourceMappingURL=Image.module.css.map */
+}/*# sourceMappingURL=Image.module.css.map */

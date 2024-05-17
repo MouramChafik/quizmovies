@@ -13,6 +13,7 @@
   height: 10vh;
   line-height: 10vh;
   margin: 0;
+  color: #7474d6;
 }
 
 .userAndScore {
@@ -52,4 +53,16 @@
 
 .avatar {
   height: 100%;
-} /*# sourceMappingURL=Header.module.css.map */
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    font-size: 1.4rem;
+    height: 5vh;
+    line-height: 5vh;
+    padding-right: 40px;
+  }
+  .theScore {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

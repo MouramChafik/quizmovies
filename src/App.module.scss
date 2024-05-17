@@ -87,7 +87,7 @@ body {
   #buttonBurger {
     display: block;
     height: 30px;
-    width: 30px;
+    width: 60px;
     position: fixed;
     top: 3%;
     right: 5%;
@@ -101,7 +101,7 @@ body {
   .burgerMenu {
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 10%;
     width: 50%;
     position: absolute;
     top: 10%;
@@ -120,7 +120,7 @@ body {
       color: #7474d6;
       font-size: 1.2rem;
       font-family: "Sniglet";
-      margin-bottom: 100%;
+      margin-bottom: 10%;
       text-align: center;
     }
   }

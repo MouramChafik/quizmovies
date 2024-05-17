@@ -27,7 +27,7 @@ function Api({
     setColor(false);
     const element = reset;
     element.current = true;
-  }, []);
+  }, [reset, setAnswersReturn, setColor, setFilm, setNext, setPlease]);
 
   Api.propTypes = {
     setAnswersReturn: PropTypes.func.isRequired,

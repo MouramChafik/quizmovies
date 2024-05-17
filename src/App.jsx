@@ -144,18 +144,18 @@ function App() {
           type="button"
           onClick={() => setBurger((prevState) => !prevState)}
         >
-          ?
+          Quiz
         </button>
         {burger === true ? (
           <div className={styles.burgerMenu}>
             <select onChange={(e) => setTimeDifficulty(e.target.value)}>
-              <option value="">--difficulty ?--</option>
+              <option value="">difficulty ?</option>
               <option value="30">easy (30s)</option>
               <option value="20">medium (20s)</option>
               <option value="10">hard (10s)</option>
             </select>
             <select onChange={(e) => handleChangeMode(e)}>
-              <option value="">--Theme ?--</option>
+              <option value="">Theme of quiz ?</option>
               <option value="/images">Image</option>
               <option value="/synopsis">Synopsis</option>
             </select>
