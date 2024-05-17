@@ -11,6 +11,7 @@ function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [answers, setAnswers] = useState("");
   const [answersReturn, setAnswersReturn] = useState(true);
+  // État local pour gérer le pseudo de l'utilisateur
   const [userId, setUserId] = useState(null);
   const [film, setFilm] = useState({
     backdrop_path: "xxx",
@@ -21,6 +22,7 @@ function App() {
   const [please, setPlease] = useState(false);
   const [next, setNext] = useState(false);
   const reset = useRef(true);
+  // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
@@ -35,7 +37,6 @@ function App() {
     setAnswersReturn(true);
     element.current = false;
     navigate(e.target.value);
-    setBurger(false); // Close the burger menu after selection
   }
 
   function getColor() {
@@ -44,7 +45,6 @@ function App() {
     }
     return "red";
   }
-
   return (
     <div className={styles.appAllContainer}>
       <select

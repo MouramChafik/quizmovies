@@ -97,8 +97,8 @@ body {
   }
   #buttonBurger {
     display: block;
-    height: 30px;
-    width: 60px;
+    height: 2rem;
+    width: 6rem;
     position: fixed;
     top: 3%;
     right: 5%;
