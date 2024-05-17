@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 function Header({ userId, score, selectedAvatar }) {
   return (
     <div className={styles.header}>
-      <h2 className={styles.logoText}>API-Quiz</h2>
+      <h2 className={styles.logoText}>🎬 API-Quiz</h2>
       <div className={styles.userAndScore}>
         <p className={styles.theUser}>{userId}</p>
         {selectedAvatar !== null && (

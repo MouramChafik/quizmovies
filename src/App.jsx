@@ -81,7 +81,7 @@ function App() {
           {userId !== null && selectedAvatar !== null && quizType === "" ? (
             <div className={styles.chooseQuizType}>
               <img src="./src/assets/quiz.jpg" alt="Choose the type of your quiz" className={styles.ChooseImg} />
-              <p>Choose the type of your quiz</p>
+              <p>Choose the theme of the quiz 😊</p>
             </div>
           ) : (
             <>
