@@ -6,6 +6,7 @@ import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Header from "./components/Header/Header";
+import QuizChoose from "./assets/quiz.jpg";
 
 function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
@@ -80,7 +81,7 @@ function App() {
         <div className={styles.appBody}>
           {userId !== null && selectedAvatar !== null && quizType === "" ? (
             <div className={styles.chooseQuizType}>
-              <img src="./src/assets/quiz.jpg" alt="Choose the type of your quiz" className={styles.ChooseImg} />
+              <img src={QuizChoose} alt="Choose the type of your quiz" className={styles.ChooseImg} />
               <p>Choose the theme of the quiz 😊</p>
             </div>
           ) : (
