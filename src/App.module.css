@@ -133,4 +133,21 @@ body {
     margin-bottom: 20%;
     text-align: center;
   }
+}
+.chooseQuizType {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.chooseQuizType img {
+  width: clamp(300px, 50%, 500px);
+  height: auto; /* Maintenir le ratio de l'image */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 5px hsl(240, 54%, 80%);
+}
+
+.chooseQuizType p {
+  font-size: 1.5rem;
+  color: #7474d6;
 }/*# sourceMappingURL=App.module.css.map */

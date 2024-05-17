@@ -11,7 +11,6 @@ function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);
   const [answers, setAnswers] = useState("");
   const [answersReturn, setAnswersReturn] = useState(true);
-  // État local pour gérer le pseudo de l'utilisateur
   const [userId, setUserId] = useState(null);
   const [film, setFilm] = useState({
     backdrop_path: "xxx",
@@ -22,7 +21,6 @@ function App() {
   const [please, setPlease] = useState(false);
   const [next, setNext] = useState(false);
   const reset = useRef(true);
-  // Fonction appelée lorsque l'utilisateur entre un pseudo
   const handleUserIdEntered = (pseudo) => {
     setUserId(pseudo);
   };
@@ -30,6 +28,7 @@ function App() {
   const [timeDifficulty, setTimeDifficulty] = useState("20");
   const [burger, setBurger] = useState(false);
   const [color, setColor] = useState(false);
+  const [quizType, setQuizType] = useState("");
 
   function handleChangeMode(e) {
     setNext(true);
@@ -37,6 +36,8 @@ function App() {
     setAnswersReturn(true);
     element.current = false;
     navigate(e.target.value);
+    setQuizType(e.target.value);
+    setBurger(false);
   }
 
   function getColor() {
@@ -45,6 +46,7 @@ function App() {
     }
     return "red";
   }
+
   return (
     <div className={styles.appAllContainer}>
       <select
@@ -76,58 +78,67 @@ function App() {
           />
         </div>
         <div className={styles.appBody}>
-          {film !== null ? (
-            <Outlet
-              context={[film, reset, userId, setNext, next, timeDifficulty]}
-            />
+          {userId !== null && selectedAvatar !== null && quizType === "" ? (
+            <div className={styles.chooseQuizType}>
+              <img src="./src/assets/quiz.jpg" alt="Choose the type of your quiz" className={styles.ChooseImg} />
+              <p>Choose the type of your quiz</p>
+            </div>
           ) : (
-            <p>loading</p>
+            <>
+              {film !== null ? (
+                <Outlet
+                  context={[film, reset, userId, setNext, next, timeDifficulty]}
+                />
+              ) : (
+                <p>loading</p>
+              )}
+              {check === true ? (
+                <LogicAnswers
+                  answers={answers}
+                  film={film}
+                  setAnswersReturn={setAnswersReturn}
+                  answersReturn={answersReturn}
+                  setScore={setScore}
+                  score={score}
+                  setFilm={setFilm}
+                  setAnswers={setAnswers}
+                  Api={<Api />}
+                  setCheck={setCheck}
+                  setPlease={setPlease}
+                  setNext={setNext}
+                  next={next}
+                  setColor={setColor}
+                />
+              ) : null}
+              <Answers
+                setAnswersReturn={setAnswersReturn}
+                answers={answers}
+                setAnswers={setAnswers}
+                setCheck={setCheck}
+                next={next}
+                reset={reset}
+              />
+              {next === true ? (
+                <p
+                  className={styles.response}
+                  style={{
+                    color: getColor(),
+                  }}
+                >
+                  {film.original_title}
+                </p>
+              ) : null}
+              {please === true && next !== true ? (
+                <p className={styles.retry}>No! Please try again!</p>
+              ) : null}
+              {userId === null || selectedAvatar === null ? (
+                <UserId
+                  setStateUserId={handleUserIdEntered}
+                  setAvatarSelected={setSelectedAvatar}
+                />
+              ) : null}
+            </>
           )}
-          {check === true ? (
-            <LogicAnswers
-              answers={answers}
-              film={film}
-              setAnswersReturn={setAnswersReturn}
-              answersReturn={answersReturn}
-              setScore={setScore}
-              score={score}
-              setFilm={setFilm}
-              setAnswers={setAnswers}
-              Api={<Api />}
-              setCheck={setCheck}
-              setPlease={setPlease}
-              setNext={setNext}
-              next={next}
-              setColor={setColor}
-            />
-          ) : null}
-          <Answers
-            setAnswersReturn={setAnswersReturn}
-            answers={answers}
-            setAnswers={setAnswers}
-            setCheck={setCheck}
-            next={next}
-            reset={reset}
-          />
-          {next === true ? (
-            <p
-              className={styles.response}
-              style={{
-                color: getColor(),
-              }}
-            >
-              {film.original_title}
-            </p>
-          ) : null}
-          {please === true && next !== true ? (
-            <p className={styles.retry}>No! Please try again!</p>
-          ) : null}
-          {userId === null || selectedAvatar === null ? (
-            <UserId
-              setStateUserId={handleUserIdEntered}
-              setAvatarSelected={setSelectedAvatar}
-            />
-          ) : null}
         </div>
       </div>
       <div className={styles.appMenu}>
