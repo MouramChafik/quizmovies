@@ -6,7 +6,7 @@ import Api from "./components/Api/Api";
 import LogicAnswers from "./components/LogicAnswers/LogicAnswers";
 import Answers from "./components/Answers/Answers";
 import Header from "./components/Header/Header";
-import QuizChoose from "./assets/quiz.jpg";
+import QuizChoose from "./assets/logoSmile2.png";
 
 function App() {
   const [selectedAvatar, setSelectedAvatar] = useState(null);

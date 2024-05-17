@@ -33,7 +33,7 @@
 }
 body {
   @include backgroundStyle;
-  background-image: url("./src/assets/bouboulesDesktop.png");
+  background-image: url("./src/assets/movie2.jpg");
   object-fit: cover;
 }
 
@@ -70,7 +70,7 @@ body {
 @media screen and (max-width: 498px) {
   body {
     @include backgroundStyle;
-    background-image: url("./src/assets/bouboulesMobile.png");
+    background-image: url("./src/assets/movie2.jpg");
   }
 }
 
@@ -135,10 +135,10 @@ body {
   height: auto; /* Maintenir le ratio de l'image */
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0px 5px 5px 5px hsl(240, 54%, 80%);
 }
 
 .chooseQuizType p {
   font-size: 1.5rem;
   color: #7474d6;
+  margin: 0;
 }

@@ -6,7 +6,7 @@
 }
 
 .logoApp {
-  height: 20vh;
+  height: 25vh;
 }
 
 .userAndScore {
@@ -31,7 +31,9 @@
 .theUser {
   font-size: 2rem;
   font-family: "Sniglet";
-  color: #7474d6;
+  color: #ffffff;
+  background-color: #7474d6;
+  border-radius: 5px;
   width: 30%;
   text-align: center;
 }
@@ -39,7 +41,9 @@
 .theScore {
   font-size: 2rem;
   font-family: "Sniglet";
-  color: #7474d6;
+  color: #ffffff;
+  background-color: #7474d6;
+  border-radius: 5px;
   width: 30%;
   text-align: center;
 }
